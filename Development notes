@@ -1,0 +1,21 @@
+For API Effort Estimation sheet in Google sheets, before 4/21 we need to:
+    - Add an assumtpions section
+    - Add UI implementation to task schedule
+
+For Project we need to before 4/21:
+    -Figure out MongoDB connection bug
+    - Show min. 1 testable route with Postman persisting a customer
+
+This week (week of 4/20), we need to:
+    -Take exam #2
+
+
+For Project we need to:
+    -Write Unit tests for each service
+    - Maintain ReadME file
+    - Implement Spring API gateway server
+    - Make sure to include delete routes in services
+    - Remember to have all emails/texts sent from notification service (inlcuding OTP's with Twilio)
+    
+    
+

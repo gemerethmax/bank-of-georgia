@@ -5,9 +5,9 @@ For API Effort Estimation sheet in Google sheets, before 4/21 we need to:
     - 5/29 Last day of internship
 
 For Project we need to before 4/24 (Next meeting):
-    - Show min. 1 testable route with Postman registering a customer
+    - Show min. 1 testable route with Postman registering a customer ✅
 
-This week? (week of 4/20??), we need to:
+Next week? (week of 4/27??), we need to:
     -Take exam #2
 
 
@@ -21,6 +21,12 @@ For Project we need to:
     - Remember to have all emails/texts sent from notification service (inlcuding OTP's with Twilio)
 
     -Kubernetes???
+
+Max's Notes/Progress Updates:
+    -Succesfully able to test registerCustomer and persist data
+    -Currently working on Auth/RequestOTP:
+        -Setting up authController, AuthService, Notification-service with Twilio (will be creating
+        an account for us).
 
     
     

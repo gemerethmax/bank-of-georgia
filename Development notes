@@ -1,11 +1,19 @@
 For API Effort Estimation sheet in Google sheets, before 4/21 we need to:
-    - Add an assumtpions section ✅
-    - Add UI implementation to task schedule ✅
     - Add 2 weeks for QA (Quality Assurance)
     - 5/29 Last day of internship
 
-For Project we need to before 4/24 (Next meeting):
-    - Show min. 1 testable route with Postman registering a customer ✅
+For Project we need to before 4/28 (Next meeting):
+    -Presention of  Sprint work:  
+        -Banking Project - Sprint 1 - Demo ( work done from Apr 20 - Apr 27)
+            -Delivery of the APIs - Postman Collecion
+                Things to be reviewed:
+                    --JUnit test cases - atleast 2 test cases per API (methods)
+                    --Latest code  should be pulled  from development branch of the repository
+                    --APIs are running only as docker container
+            -Showing any UI work , if that was part of Sprint 1.
+            -Discuss about  sprint 2 plan
+            -Any pending or carry over from Sprint 1.
+
 
 Next week? (week of 4/27??), we need to:
     -Take exam #2
@@ -24,9 +32,17 @@ For Project we need to:
 
 Max's Notes/Progress Updates:
     -Succesfully able to test registerCustomer and persist data
-    -Currently working on Auth/RequestOTP:
-        -Setting up authController, AuthService, Notification-service with Twilio (will be creating
-        an account for us).
+    -Succesfully able to test requestOTP and receive OTP with virtual phone
+    -Created additonal Google Doc
+    
+        -- Max will add Redis implementation
+        -- Max needs to refactor auth service to call notification service  from an HTTP Client/ Gateway class
+        -- Redis will be set up from a repositroy layer and impl.
+        -- Refactor file structure for each service to have it's own file, and rename "dao" to "repository"
+        -- Refactor Service layers to have a service interafce and srvice impl
+        -- Create Notes
+        -- Edit ReadMe
+        -- Add validation
 
     
     

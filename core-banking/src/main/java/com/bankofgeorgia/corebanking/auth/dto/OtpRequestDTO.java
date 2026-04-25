@@ -1,4 +1,4 @@
-package com.bankofgeorgia.corebanking.dto;
+package com.bankofgeorgia.corebanking.auth.dto;
 
 import lombok.Getter;
 import lombok.Setter;

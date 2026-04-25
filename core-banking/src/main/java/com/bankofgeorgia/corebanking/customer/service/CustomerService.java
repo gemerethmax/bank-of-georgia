@@ -1,47 +1,21 @@
-package com.bankofgeorgia.corebanking.service;
+package com.bankofgeorgia.corebanking.customer.service;
 
-import com.bankofgeorgia.corebanking.dto.CustomerRequestDTO;
-import com.bankofgeorgia.corebanking.dto.CustomerResponseDTO;
-import com.bankofgeorgia.corebanking.entity.Customer;
-import com.bankofgeorgia.corebanking.dao.CustomerDao;
+import java.util.List;
 
-import java.util.logging.Logger;
+import com.bankofgeorgia.corebanking.customer.dto.CustomerRequestDTO;
+import com.bankofgeorgia.corebanking.customer.dto.CustomerResponseDTO;
+import com.bankofgeorgia.corebanking.customer.dto.CustomerStatusUpdateRequestDTO;
+import com.bankofgeorgia.corebanking.customer.dto.UpdateCustomerRequestDTO;
 
-import org.springframework.stereotype.Service;
+public interface CustomerService {
 
-@Service
-public class CustomerService {
-    Logger logger = Logger.getLogger(CustomerService.class.getName());
+    CustomerResponseDTO registerCustomer(CustomerRequestDTO request);
 
-    private final CustomerDao customerDao;
+    CustomerResponseDTO updateCustomer(String id, UpdateCustomerRequestDTO request);
 
-    public CustomerService(CustomerDao customerDao) {
-        this.customerDao = customerDao;
-    }
+    CustomerResponseDTO getCustomerById(String id);
 
-    public CustomerResponseDTO registerCustomer(CustomerRequestDTO customerRequest) {
-        logger.info("Registering customer with email: " + customerRequest.getEmail());
-       
-        Customer customer = new Customer();
-        customer.setFirstName(customerRequest.getFirstName());
-        customer.setLastName(customerRequest.getLastName());
-        customer.setEmail(customerRequest.getEmail());
-        customer.setUsername(customerRequest.getUsername());
-        customer.setPhone(customerRequest.getPhone());
-        customer.setPassword(customerRequest.getPassword()); 
-        customer.setDateOfBirth(customerRequest.getDateOfBirth());
+    List<CustomerResponseDTO> getAllCustomers();
 
-        Customer savedCustomer = customerDao.save(customer);
-
-        CustomerResponseDTO responseDTO = new CustomerResponseDTO();
-    
-        responseDTO.setMessage("Customer registered successfully");
-        responseDTO.setCustomerId(savedCustomer.getCustomerId());
-        responseDTO.setUsername(savedCustomer.getUsername());
-        responseDTO.setStatus("ACTIVE");
-
-        return responseDTO;
-    }
-
-
+    CustomerResponseDTO updateCustomerStatus(String id, CustomerStatusUpdateRequestDTO request);
 }
